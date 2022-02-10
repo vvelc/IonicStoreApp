@@ -1,0 +1,42 @@
+<!-- <ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title slot="start">Prueba</ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="bordered" fill="solid" color="light">
+        <ion-icon color="primary" name="notifications"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content #content class="ion-padding">
+  <ion-text>
+    <h1 class="page-title">Catalog</h1>
+    <p class="page-subtitle">Find anything you want!</p>
+  </ion-text>
+  <div class="searchbar-container">
+    <ion-searchbar></ion-searchbar>
+  </div>
+  <div class="grid ion-margin-bottom">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let product of filteredProducts">
+          <ion-card>
+            <div class="image-wrapper">
+              <img src={{product.image}} alt="">
+            </div>
+            <ion-card-header>
+              <ion-card-subtitle>{{product.category}}</ion-card-subtitle>
+              <ion-card-title>{{product.title}}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-button (click)="openProductsDetailModal(product.id)" expand="block" fill="clear">
+                Details
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

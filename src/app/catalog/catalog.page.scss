@@ -1,0 +1,106 @@
+ion-header {
+
+    ion-toolbar {
+        --background: var(--ion-color-light);
+        background: var(--ion-color-light);
+        padding: 0 10px;
+    }
+
+    ion-toolbar {
+        .bordered {
+            --border-radius: 10px;
+            --box-shadow: 5px 5px 10px #d1d1d1, -5px -5px 10px #FFFFFF
+        }
+    }
+
+    ion-item {
+        h3 {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        ion-avatar {
+            border-radius: 40%;
+        }
+    }
+}
+
+ion-content {
+    --background: var(--ion-color-light);
+    background: var(--ion-color-light);
+
+    ion-fab {
+        opacity: 0;
+        &.show {
+            opacity: 1;
+        }
+    }
+
+    .page-title {
+        font-weight: 700;
+        font-size: 40px;
+    }
+    .page-subtitle {
+        margin-top: 0;
+        font-size: 20px;
+        color: #7989ae;
+    }
+
+    ion-searchbar {
+        --box-shadow: none;
+        --border-radius: 15px;
+        height: 30px;
+        margin-top: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .grid {
+        margin-top: 8px;
+        .grid-title-wrapper {
+            display: flex;
+            align-items: center;
+            line-height: 25px;
+            margin-bottom: 16px;
+            h3 {
+                margin: 0;
+                margin-right: 4px;
+                font-weight: 700;
+            }
+            ion-icon {
+                font-size: 25px;
+            }
+        }
+
+        ion-grid {
+            --ion-grid-padding: 0;
+            --ion-grid-column-padding: 0px;
+
+            ion-card {
+                border-radius: 8px;
+                box-shadow: none;
+
+                .image-wrapper{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 200px;
+
+                    img {
+                        height: 150px;
+                    } 
+                }
+                   
+
+                .product-price {
+                    font-size: 20px;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}
